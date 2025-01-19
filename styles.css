@@ -56,6 +56,14 @@ section {
     object-fit: cover;
 }
 
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem); /* Fluid font size */
+}
+
+.hero p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
 /* Social links */
 .socials {
     display: flex;
@@ -65,17 +73,10 @@ section {
     margin-top: 20px;
 }
 
-.hero h1 {
-    font-size: clamp(2rem, 5vw, 4rem); /* Fluid font size */
-}
-
-.hero p {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-}
-
 .social svg {
     width: 50px;
     height: 50px;
+    margin: 0 10px;
 }
 
 /* Information Section */
