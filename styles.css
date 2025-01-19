@@ -198,6 +198,9 @@ ul {
 
 /* Responsive Media Queries */
 @media (min-width: 768px) {
+    .hero {
+        gap: 5px; /* Reduce gap for smaller screens */
+    }
     .hero-area {
         flex-direction: row;
         justify-content: space-between;
