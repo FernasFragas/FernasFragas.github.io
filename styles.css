@@ -19,11 +19,21 @@ section {
     background-color: #1c1d25;
     color: grey;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack child elements vertically by default */
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
+    gap: 20px;
+}
+
+/* Nested layout for name and photo */
+.hero-content {
+    display: flex;
+    flex-direction: row; /* Name and photo in one row */
+    justify-content: center;
+    align-items: center; /* Vertically align text and photo */
+    gap: 20px; /* Space between text and photo */
 }
 
 .hero-area {
@@ -33,16 +43,26 @@ section {
     width: 100%;
 }
 
+.hero-text {
+    margin: 0;
+    text-align: right; /* Align text to the right of the photo */
+}
+
 .hero-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Make it circular */
-    margin: 20px 0; /* Add spacing above and below */
+    border-radius: 50%;
     border: 2px solid grey;
+    object-fit: cover;
 }
 
-.hero-text {
-    margin: 20px 0;
+/* Social links */
+.socials {
+    display: flex;
+    flex-direction: row; /* Links arranged horizontally */
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 20px;
 }
 
 .hero h1 {
@@ -51,15 +71,6 @@ section {
 
 .hero p {
     font-size: clamp(1rem, 3vw, 1.5rem);
-}
-
-/* Social Links */
-.socials {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 0;
 }
 
 .social svg {
@@ -82,6 +93,11 @@ section {
 
 .information p {
     font-size: clamp(1rem, 3vw, 1.5rem);
+    word-wrap: break-word; /* Ensure long links break */
+    overflow-wrap: break-word;
+    display: inline-block; /* Ensure consistent text layout */
+    max-width: 100%; /* Constrain links to their container */
+    white-space: normal; /* Allow wrapping */
 }
 
 /* Navigation */
@@ -185,22 +201,37 @@ ul {
     color: #d1d1d1;
     margin-top: 10px;
     line-height: 1.5;
+    word-wrap: break-word; /* Ensure long links break */
+    overflow-wrap: break-word;
+    display: inline-block; /* Ensure consistent text layout */
+    max-width: 100%; /* Constrain links to their container */
+    white-space: normal; /* Allow wrapping */
 }
 
 /* Responsive Media Queries */
 @media (min-width: 768px) {
     .hero {
-        padding: 40px 20px;
         gap: 5px; /* Reduce gap for smaller screens */
     }
     .hero-area {
+        flex-direction: row;
         justify-content: space-between;
-        flex-direction: column; 
     }
 
     .hero-text {
         text-align: left;
         margin-left: 50px;
+    }
+
+    .hero-content {
+        flex-direction: row; /* Stack name and photo vertically on smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .hero-photo {
+        margin: 10px 0;
+        width: 120px; /* Reduce photo size */
+        height: 120px;
     }
 
     .socials {
@@ -209,20 +240,27 @@ ul {
     }
 
     .information {
-        padding: 60px;
+        padding: 40px 15px
     }
 
     ul {
         gap: 40px;
     }
 
-    .hero-text h1 {
-        font-size: 2rem; /* Scale down for phones */
+    .information h2 {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        margin-bottom: 20px;
+    }
+    
+    .information p {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        word-wrap: break-word; /* Ensure long links break */
+        overflow-wrap: break-word;
+        display: inline-block; /* Ensure consistent text layout */
+        max-width: 50%; /* Constrain links to their container */
+        white-space: normal; /* Allow wrapping */
     }
 
-    .hero-text p {
-        font-size: 1.2rem;
-    }
 }
 
 @media (min-width: 1200px) {
