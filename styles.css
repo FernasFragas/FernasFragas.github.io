@@ -84,15 +84,6 @@ section {
     font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
-/* Footer */
-footer {
-    background-color: black;
-    color: grey;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 1rem;
-}
-
 /* Navigation */
 nav {
     display: flex;
@@ -199,11 +190,12 @@ ul {
 /* Responsive Media Queries */
 @media (min-width: 768px) {
     .hero {
+        padding: 40px 20px;
         gap: 5px; /* Reduce gap for smaller screens */
     }
     .hero-area {
-        flex-direction: row;
         justify-content: space-between;
+        flex-direction: column; 
     }
 
     .hero-text {
@@ -222,6 +214,14 @@ ul {
 
     ul {
         gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Scale down for phones */
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
     }
 }
 
