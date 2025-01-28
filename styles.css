@@ -124,7 +124,7 @@ section {
 }
 
 .information .info p {
-    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    font-size: clamp(1.5rem, 4vw, 1.7rem);
     word-wrap: break-word; /* Ensure long links break */
     overflow-wrap: break-word;
     display: inline-block; /* Ensure consistent text layout */
