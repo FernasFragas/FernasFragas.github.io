@@ -8,10 +8,17 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
+    background-color: #1c1d25;
 }
 
 section {
     background-color: #1c1d25;
+}
+
+.information h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 20px;
+    color: grey;
 }
 
 /* Hero Section */
@@ -84,22 +91,46 @@ section {
 .information {
     background-color: #1c1d25;
     padding: 40px 20px;
-    color: grey;
     text-align: center;
 }
 
-.information h2 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    margin-bottom: 20px;
+.information .info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.information p {
+.information .info detail {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px; /* Limits the width for better readability */
+    background-color: rgb(189, 189, 189);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+    word-wrap: break-word; /* Ensure long links break */
+    overflow-wrap: break-word;
+    display: inline-block; /* Ensure consistent text layout */
+    white-space: normal; /* Allow wrapping */
+}
+
+.information .info h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 20px;
+    color: #2b2c36;
+}
+
+.information .info p {
     font-size: clamp(1rem, 3vw, 1.5rem);
     word-wrap: break-word; /* Ensure long links break */
     overflow-wrap: break-word;
     display: inline-block; /* Ensure consistent text layout */
     max-width: 100%; /* Constrain links to their container */
     white-space: normal; /* Allow wrapping */
+    color: #2b2c36;
 }
 
 /* Navigation */
