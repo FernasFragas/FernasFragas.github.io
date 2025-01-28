@@ -103,7 +103,7 @@ section {
 .information .info detail {
     text-align: left;
     margin: 0 auto;
-    max-width: 600px; /* Limits the width for better readability */
+    max-width: 90%; /* Limits the width for better readability */
     background-color: rgb(189, 189, 189);
     padding: 20px;
     border-radius: 10px;
@@ -124,7 +124,7 @@ section {
 }
 
 .information .info p {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
     word-wrap: break-word; /* Ensure long links break */
     overflow-wrap: break-word;
     display: inline-block; /* Ensure consistent text layout */
@@ -211,7 +211,7 @@ ul {
 .medium-articles .articles article {
     text-align: left;
     margin: 0 auto;
-    max-width: 600px; /* Limits the width for better readability */
+    max-width: 90%; /* Limits the width for better readability */
     background-color: #2b2c36;
     padding: 20px;
     border-radius: 10px;
@@ -221,7 +221,7 @@ ul {
 .medium-articles .articles article a {
     color: lightblue;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: clamp(2rem, 5vw, 2rem);
     font-weight: bold;
 }
 
@@ -230,7 +230,7 @@ ul {
 }
 
 .medium-articles .articles .article-description {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2.5vw, 2rem);
     color: #d1d1d1;
     margin-top: 10px;
     line-height: 1.5;
