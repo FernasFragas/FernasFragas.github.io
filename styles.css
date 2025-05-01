@@ -117,6 +117,12 @@ section {
     white-space: normal; /* Allow wrapping */
 }
 
+.information .info detail:hover {
+    background-color: lightgray; /* Slightly lighter background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    cursor: help; /* Indicate clickable */
+}
+
 .information .info h2 {
     font-size: clamp(1.5rem, 4vw, 3rem);
     margin-bottom: 20px;
@@ -216,13 +222,35 @@ ul {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition */
 }
 
-.medium-articles .articles article a {
+/* Add hover effect */
+.medium-articles .articles article:hover {
+    background-color: #3a3b4a; /* Slightly lighter background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    cursor: pointer; /* Indicate clickable */
+}
+
+/* Styles for the link that will wrap the article content */
+.medium-articles .articles article a.article-wrapper {
+    display: block; /* Make the link fill the article */
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit text color from article */
+}
+
+/* Style the title within the wrapper link */
+.medium-articles .articles article a.article-wrapper h3 {
     color: lightblue;
     text-decoration: none;
-    font-size: clamp(2rem, 5vw, 2rem);
+    font-size: clamp(1.5rem, 4vw, 1.8rem); /* Adjusted size slightly */
     font-weight: bold;
+    margin-bottom: 10px; /* Add some space below title */
+}
+
+/* Keep hover effect for the title text */
+.medium-articles .articles article a.article-wrapper h3:hover {
+    text-decoration: underline;
 }
 
 .medium-articles .articles article a:hover {
@@ -230,7 +258,7 @@ ul {
 }
 
 .medium-articles .articles .article-description {
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: #d1d1d1;
     margin-top: 10px;
     line-height: 1.5;
