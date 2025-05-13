@@ -269,6 +269,72 @@ ul {
     white-space: normal; /* Allow wrapping */
 }
 
+.projects {
+    background-color: #1c1d25;
+    color: grey;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.projects h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 20px;
+}
+
+.projects .project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projects .project-info detail {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 90%; /* Limits the width for better readability */
+    background-color: rgb(189, 189, 189);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+    word-wrap: break-word; /* Ensure long links break */
+    overflow-wrap: break-word;
+    display: inline-block; /* Ensure consistent text layout */
+    white-space: normal; /* Allow wrapping */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition */
+}
+
+.projects .project-info detail:hover {
+    background-color: lightgray; /* Slightly lighter background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    cursor: pointer; /* Indicate clickable */
+}
+
+.projects .project-info detail h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 20px;
+    color: #2b2c36;
+    text-align: left;
+}
+
+.projects .project-info detail p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    word-wrap: break-word; /* Ensure long links break */
+    overflow-wrap: break-word;
+    display: inline-block; /* Ensure consistent text layout */
+    max-width: 100%; /* Constrain links to their container */
+    color: #2b2c36;
+}
+
+.projects .project-info detail img {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px auto; /* Changed margin to auto for horizontal centering */
+    display: block; /* Added to ensure margin auto works */
+}
+
 /* Responsive Media Queries */
 @media (min-width: 768px) {
     .hero {
